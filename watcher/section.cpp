@@ -1,0 +1,28 @@
+#include "section.h"
+
+namespace section
+{
+	std::map<ACCESS_MASK, const char*> AccessMasks =
+	{
+		{0x0001, "SECTION_QUERY"},
+		{0x0002, "SECTION_MAP_WRITE"},
+		{0x0004, "SECTION_MAP_READ"},
+		{0x0008, "SECTION_MAP_EXECUTE"},
+		{0x0010, "SECTION_EXTEND_SIZE"},
+		{0x0020, "SECTION_MAP_EXECUTE_EXPLICIT"}
+	};
+
+	std::map<ACCESS_MASK, const char*> AttributesMasks =
+	{
+		{0x00040000, "SEC_PARTITION_OWNER_HANDLE"},
+		{0x00080000, "SEC_64K_PAGES"},
+		{0x00800000, "SEC_FILE"},
+		{0x01000000, "SEC_IMAGE"},
+		{0x02000000, "SEC_PROTECTED_IMAGE"},
+		{0x04000000, "SEC_RESERVE"},
+		{0x08000000, "SEC_COMMIT"},
+		{0x10000000, "SEC_NOCACHE"},
+		{0x40000000, "SEC_WRITECOMBINE"},
+		{0x80000000, "SEC_LARGE_PAGES"}
+	};
+}
